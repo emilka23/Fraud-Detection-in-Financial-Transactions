@@ -34,4 +34,5 @@ These features provided such a strong signal that even a standard Random Forest 
 The project demonstrates that **domain knowledge and feature engineering are often more impactful than model complexity**. By explicitly defining the "logic of fraud" through math-based features, I created a system that is both highly secure and operationally efficient.
 
 ---
+** Dataset: **  [Kaggle - Fraud Detection Dataset] (https://www.kaggle.com/datasets/amanalisiddiqui/fraud-detection-dataset?resource=download)
 *Developed as part of my Data Science Portfolio.*
