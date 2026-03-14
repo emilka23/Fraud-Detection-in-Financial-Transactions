@@ -32,6 +32,7 @@ These features consistently ranked at the top of the **Feature Importance** plot
 
 ##  Conclusion
 The project concludes that a **Random Forest** classifier, supported by targeted **Feature Engineering**, is an ideal solution for real-time fraud detection. The final model is ready for production deployment, offering maximum security with virtually zero operational waste (False Positives).
+
 ---
 ** Dataset: **  [Kaggle - Fraud Detection Dataset] (https://www.kaggle.com/datasets/amanalisiddiqui/fraud-detection-dataset?resource=download)
 *Developed as part of my Data Science Portfolio.*
