@@ -1,25 +1,25 @@
 #  Fraud Detection in Financial Transactions
 
 ##  Project Overview
-The objective of this project is to develop a robust Machine Learning system to detect fraudulent financial transactions. Using a highly imbalanced dataset (nearly 2M samples, <0.1% fraud), I progressed from a simple baseline to a sophisticated ensemble model combined with advanced feature engineering.
+The goal of this project was to build a high-performance machine learning system capable of detecting fraudulent financial transactions in a highly imbalanced dataset. The project demonstrates the full data science lifecycle, from exploratory data analysis and domain-specific feature engineering to the comparative evaluation of multiple classification algorithms.
 
-##  Key Achievements
-* **97.6% Reduction in False Positives:** Slashed false alarms from over 100,000 to just **54** in the test set.
-* **Maximum Security:** Achieved a **1.00 Recall**, identifying virtually all fraudulent transactions.
-* **Business Impact:** High precision (0.97) ensures minimal customer friction while maintaining top-tier security.
+## Key Achievements
+* **Elite Accuracy:** Achieved a **Recall of 0.996** and **Precision of 0.999** using the final Random Forest model.
+* **Precision Engineering:** Successfully reduced False Positives to near-zero, ensuring a frictionless experience for legitimate customers.
+* **Domain Feature Engineering:** Identified and implemented key accounting features (`errorBalance`, `isZeroAfter`) that became the primary drivers of model performance.
+* **Baseline Evolution:** Systematically improved model precision from **0.03** (Logistic Regression) to **0.99** (Random Forest).
 
 ##  Tech Stack
 * **Language:** Python
 * **Libraries:** Scikit-Learn, XGBoost, Pandas, NumPy, Matplotlib, Seaborn
-* **Techniques:** Class Imbalance Handling (`class_weight`, `scale_pos_weight`), Pipeline construction, Feature Engineering, Ensemble Learning.
+* **Techniques:** Class Imbalance Handling , Pipeline construction, Feature Engineering.
 
 ##  Model Evolution
 
-| Model Stage | Model Type | Precision | Recall | F1-Score | False Positives |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| **Baseline** | Logistic Regression | 0.02 | 0.93 | 0.04 | 101,516 |
-| **Intermediate** | XGBoost (Raw Data) | 0.51 | 0.98 | 0.67 | 2,322 |
-| **Final** | **Random Forest (Enhanced)** | **0.97** | **1.00** | **0.98** | **54** |
+| Model | Recall (Fraud) | Precision (Fraud) | Status |
+| :--- | :---: | :---: | :--- |
+| **Logistic Regression** | 0.99 | 0.03 | Baseline |
+| **Random Forest** | **0.996** | **0.999** | **Winner (Production Ready)** |
 
 ##  The Winning Strategy: Feature Engineering
 The breakthrough came from moving beyond raw data. I engineered three domain-specific features that exposed the mathematical logic behind fraud:
@@ -28,11 +28,10 @@ The breakthrough came from moving beyond raw data. I engineered three domain-spe
 2. **`errorBalanceDest`**: Identifies inconsistencies in how funds arrive at the destination.
 3. **`isZeroAfter`**: A binary flag for accounts that were completely emptied—a common signature of fraudulent behavior.
 
-These features provided such a strong signal that even a standard Random Forest outperformed complex gradient boosting models (XGBoost) in terms of precision.
+These features consistently ranked at the top of the **Feature Importance** plots, proving that domain knowledge is often more impactful than algorithm complexity.
 
 ##  Conclusion
-The project demonstrates that **domain knowledge and feature engineering are often more impactful than model complexity**. By explicitly defining the "logic of fraud" through math-based features, I created a system that is both highly secure and operationally efficient.
-
+The project concludes that a **Random Forest** classifier, supported by targeted **Feature Engineering**, is an ideal solution for real-time fraud detection. The final model is ready for production deployment, offering maximum security with virtually zero operational waste (False Positives).
 ---
 ** Dataset: **  [Kaggle - Fraud Detection Dataset] (https://www.kaggle.com/datasets/amanalisiddiqui/fraud-detection-dataset?resource=download)
 *Developed as part of my Data Science Portfolio.*
